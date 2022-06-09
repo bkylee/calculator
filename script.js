@@ -1,36 +1,26 @@
 // set manipulative display variable. 
 
-const display = document.querySelector("#display");
-let total = 0; 
-display.textContent = total;
+const display = document.querySelector("#display"); 
+display.textContent = currentVal;
 
-
-
+let total = 0;
+let currentVal = "0";
 
 const add = function(x,y) {
-    display.textContent = x+y;
+    total = x+y;
   };
   
   const subtract = function(x,y) {
-    display.textContent = x-y;
+    total = x-y;
   };
   
   const multiply = function(x,y) {
-    display.textContent = x*y;
-  };
-  
-  const power = function(x,y) {
-      total = x**y;
-    display.textContent = total;
-  };
-  
-  const factorial = function(x) {
-    total = 0;
-      if (x === 0) {
-      display.textContent = 1;
-    }
-      else {
-        display.textContent = (x * factorial(x-1));
-    }
+    total = x*y;
   };
 
+const num1 = document.querySelector("#1");
+num1.addEventListener('onclick', updateVal(1)) 
+
+function updateVal (n) {
+    currentVal = currentVal + n;
+}
