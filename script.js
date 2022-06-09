@@ -1,43 +1,47 @@
+// set manipulative display variable. 
+
 const display = document.querySelector("#display");
 let total = 0; 
 display.textContent = total;
 
+
+
+
 const add = function(x,y) {
     let sum = x + y;
-    return sum;
+    display.textConten = sum;
   };
   
   const subtract = function(x,y) {
       result = x-y;
-    return result;
+    display.textContent = result;
   };
   
   const sum = function(...numbers) {
     let total = 0;
     if (numbers.length === 0) {
-      return total;
+      display.textContent = total;
     }
-    else {return total = Array.from(...numbers).reduce((x,y) => {return x + y}, 0);}
+    else {display.textContent total = Array.from(...numbers).reduce((x,y) => {display.textContent x + y}, 0);}
     };
   
   const multiply = function(...numbers) {
     total = 0;
-    return total = Array.from(...numbers).reduce((x,y) => {return x * y});
+    display.textContent total = Array.from(...numbers).reduce((x,y) => {display.textContent x * y});
   };
   
   const power = function(x,y) {
       total = x**y;
-    return total;
+    display.textContent = total;
   };
   
   const factorial = function(x) {
     total = 0;
       if (x === 0) {
-      return total = 1;
+      display.textContent = 1;
     }
       else {
-        return total = (x * factorial(x-1));
+        display.textContent = (x * factorial(x-1));
     }
   };
 
-  
