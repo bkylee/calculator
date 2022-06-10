@@ -17,11 +17,12 @@ const operate = function (operator, x,y) {
 
 // set manipulative display variable. 
 
+let total = 0;
+let currentVal = "0";
+
 const display = document.querySelector("#display"); 
 display.textContent = currentVal;
 
-let total = 0;
-let currentVal = "0";
 
 const add = function(x,y) {
     total = x+y;
@@ -38,10 +39,25 @@ const add = function(x,y) {
     total = x/y;
   };
 
-const num1 = document.querySelector("#1");
-num1.addEventListener('onclick', updateVal(1)) 
+const num1 = document.querySelector("#one");
+num1.addEventListener('click', () => {
+  if (currentVal === "0") {
+    currentVal = "1";
+    display.textContent = currentVal;
+  }
+  else
+  currentVal = currentVal + "1";
+  display.textContent = currentVal;
+}); 
 
 function updateVal (n) {
+    if (currentVal === "0"){
+      currentVal = n;
+      display.textContent = currentVal;
+
+    }
+    else {
     currentVal = currentVal + n;
     display.textContent = currentVal;
+  }
 }
