@@ -14,7 +14,6 @@ const operate = function (operator, x,y) {
   }
 }
 
-
 // set manipulative display variable. 
 
 let total = 0;
@@ -159,6 +158,25 @@ dblZero.addEventListener('click', () => {
   }
   else
   currentVal = currentVal + "00";
+  display.textContent = currentVal;
+}); 
+
+const clr = document.querySelector("#clear");
+clr.addEventListener('click', () => {
+  currentVal = "0";
+  display.textContent = currentVal;
+}); 
+
+
+//have to add toggle for this button 
+const dot = document.querySelector("#dot");
+dot.addEventListener('click', () => {
+  if (currentVal === "0") {
+    currentVal = "0.";
+    display.textContent = currentVal;
+  }
+  else
+  currentVal = currentVal + ".";
   display.textContent = currentVal;
 }); 
 
