@@ -165,6 +165,7 @@ const clr = document.querySelector("#clear");
 clr.addEventListener('click', () => {
   currentVal = "0";
   display.textContent = currentVal;
+  dot.disabled = false;
 }); 
 
 
@@ -174,10 +175,12 @@ dot.addEventListener('click', () => {
   if (currentVal === "0") {
     currentVal = "0.";
     display.textContent = currentVal;
+    dot.disabled = true;
   }
   else
   currentVal = currentVal + ".";
   display.textContent = currentVal;
+  dot.disabled = true;
 }); 
 
 //Function below is to replace the event listener individual functions but is currently WIP
