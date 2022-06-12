@@ -18,25 +18,37 @@ const operate = function (operator, x,y) {
 
 let total = 0;
 let currentVal = "0";
+let operator = null;
 
 const display = document.querySelector("#display"); 
 display.textContent = currentVal;
 
 
 const add = function(x,y) {
-    total = x+y;
+    return x+y;
   };
   
   const subtract = function(x,y) {
-    total = x-y;
+    return x-y;
   };
   
   const multiply = function(x,y) {
-    total = x*y;
+    return x*y;
   };
   const divide = function(x,y) {
-    total = x/y;
+    return x/y;
   };
+
+//event listeners for all opeartions 
+
+const equals = document.querySelector("#equals");
+equals.addEventListener('onclick', operate(total, Number(currentVal)));
+
+const plus = document.querySelector("#plus");
+plus.addEventListener('onclick', ()=>{
+operator = "+";
+total = operate(operator,total,Number(currentVal)); 
+display.textContent = total});
 
 //event listeners for all number buttons 
 
