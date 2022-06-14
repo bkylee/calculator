@@ -16,7 +16,7 @@ const operate = function (operator, x,y) {
 
 // set manipulative display variable. 
 
-let total = 0;
+let total = "0";
 let currentVal = "0";
 let prevOperator = null;
 let currentOp = null;
@@ -55,6 +55,7 @@ currentVal = 0;
 const plus = document.querySelector("#plus");
 plus.addEventListener('onclick', ()=>{
 prevOperator = currentOp;
+total = currentVal;
 currentOp = "+";
 if (prevOperator != null){
 total = operate(prevOperator,Number(total),Number(currentVal)); 
