@@ -47,20 +47,15 @@ equals.addEventListener('onclick', ()=> {
 total = operate(currentOp, Number(total), Number(currentVal));
 display.textContent = total;
 currentOp = null;
-prevOperator = null;
-total = 0;
 currentVal = 0;
 });
 
 const plus = document.querySelector("#plus");
 plus.addEventListener('onclick', ()=>{
-prevOperator = currentOp;
-total = currentVal;
+total = operate(currentOp, Number(total), Number(currentVal));
+display.textContent = total;
 currentOp = "+";
-if (prevOperator != null){
-total = operate(prevOperator,Number(total),Number(currentVal)); 
-display.textContent = total}
-else display.textContent = currentVal;
+currentVal ="0";
 });
 
 //event listeners for all number buttons 
