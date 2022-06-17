@@ -71,7 +71,7 @@ currentOp = "-";
 currentVal ="0";
 });
 
-const times = document.querySelector("#time");
+const times = document.querySelector("#times");
 times.addEventListener('onclick', ()=>{
   if(currentOp === null){
     currentOp = "*"
