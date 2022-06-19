@@ -42,7 +42,7 @@ display.textContent = currentVal;
 //event listeners for all opeartions 
 
 const equals = document.querySelector("#equals");
-equals.addEventListener('onclick', ()=> {
+equals.addEventListener('click', ()=> {
 total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "empty";
@@ -51,7 +51,7 @@ console.log("hit");
 });
 
 const plus = document.querySelector("#plus");
-plus.addEventListener('onclick', ()=>{
+plus.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "+"
   }
@@ -63,7 +63,7 @@ currentVal ="0";
 });
 
 const minus = document.querySelector("#minus");
-minus.addEventListener('onclick', ()=>{
+minus.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "-"
   }
@@ -74,7 +74,7 @@ currentVal ="0";
 });
 
 const times = document.querySelector("#times");
-times.addEventListener('onclick', ()=>{
+times.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "*"
   }
@@ -85,7 +85,7 @@ currentVal ="0";
 });
 
 const slash = document.querySelector("#slash");
-slash.addEventListener('onclick', ()=>{
+slash.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "/"
   }
