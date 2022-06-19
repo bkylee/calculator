@@ -14,16 +14,7 @@ const operate = function (operator, x,y) {
   }
 }
 
-// set manipulative display variable. 
-
-let total = "0";
-let currentVal = "0";
-let currentOp = null;
-
-const display = document.querySelector("#display"); 
-display.textContent = currentVal;
-
-
+//operation functions for operate
 const add = function(x,y) {
     return x+y;
   };
@@ -39,19 +30,29 @@ const add = function(x,y) {
     return x/y;
   };
 
+// set manipulative display variable. 
+
+let total = "0";
+let currentVal = "0";
+let currentOp = "empty";
+
+const display = document.querySelector("#display"); 
+display.textContent = currentVal;
+
 //event listeners for all opeartions 
 
 const equals = document.querySelector("#equals");
 equals.addEventListener('onclick', ()=> {
 total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
-currentOp = null;
+currentOp = "empty";
 currentVal = "0";
+console.log("hit");
 });
 
 const plus = document.querySelector("#plus");
 plus.addEventListener('onclick', ()=>{
-  if(currentOp === null){
+  if(currentOp === "empty"){
     currentOp = "+"
   }
   else
@@ -63,7 +64,7 @@ currentVal ="0";
 
 const minus = document.querySelector("#minus");
 minus.addEventListener('onclick', ()=>{
-  if(currentOp === null){
+  if(currentOp === "empty"){
     currentOp = "-"
   }
   total = toString(operate(currentOp, Number(total), Number(currentVal)));
@@ -74,7 +75,7 @@ currentVal ="0";
 
 const times = document.querySelector("#times");
 times.addEventListener('onclick', ()=>{
-  if(currentOp === null){
+  if(currentOp === "empty"){
     currentOp = "*"
   }
   total = toString(operate(currentOp, Number(total), Number(currentVal)));
@@ -85,7 +86,7 @@ currentVal ="0";
 
 const slash = document.querySelector("#slash");
 slash.addEventListener('onclick', ()=>{
-  if(currentOp === null){
+  if(currentOp === "empty"){
     currentOp = "/"
   }
   total = toString(operate(currentOp, Number(total), Number(currentVal)));
