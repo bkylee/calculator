@@ -1,5 +1,9 @@
 //operate function that takes an operator and 2 nukmbers and then calls one of the functions on the numbers 
 const operate = function (operator, x,y) {
+  x = Number(x);
+  console.log(x);
+  y = Number(y);
+  console.log(y);
   if (operator === "+"){
     return add(x,y);
   }
@@ -13,6 +17,8 @@ const operate = function (operator, x,y) {
     return divide(x,y);
   }
 }
+
+
 
 //operation functions for operate
 const add = function(x,y) {
@@ -31,7 +37,6 @@ const add = function(x,y) {
   };
 
 // set manipulative display variable. 
-
 let total = "0";
 let currentVal = "0";
 let currentOp = "empty";
@@ -43,11 +48,10 @@ display.textContent = currentVal;
 
 const equals = document.querySelector("#equals");
 equals.addEventListener('click', ()=> {
-total = toString(operate(currentOp, Number(total), Number(currentVal)));
+total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "empty";
 currentVal = "0";
-console.log("hit");
 });
 
 const plus = document.querySelector("#plus");
@@ -56,7 +60,7 @@ plus.addEventListener('click', ()=>{
     currentOp = "+"
   }
   else
-  total = toString(operate(currentOp, Number(total), Number(currentVal)));
+  total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "+";
 currentVal ="0";
@@ -67,7 +71,7 @@ minus.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "-"
   }
-  total = toString(operate(currentOp, Number(total), Number(currentVal)));
+  total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "-";
 currentVal ="0";
@@ -78,7 +82,7 @@ times.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "*"
   }
-  total = toString(operate(currentOp, Number(total), Number(currentVal)));
+  total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "*";
 currentVal ="0";
@@ -89,7 +93,7 @@ slash.addEventListener('click', ()=>{
   if(currentOp === "empty"){
     currentOp = "/"
   }
-  total = toString(operate(currentOp, Number(total), Number(currentVal)));
+  total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "/";
 currentVal ="0";
@@ -235,6 +239,15 @@ clr.addEventListener('click', () => {
   display.textContent = currentVal;
   dot.disabled = false;
 }); 
+
+const CE = document.querySelector("#CE");
+clr.addEventListener('click', () => {
+  currentVal = "0";
+  total = "0";
+  currentOp = "empty";
+  display.textContent = currentVal;
+  dot.disabled = false;
+});
 
 
 //have to add toggle for this button 
