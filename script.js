@@ -1,16 +1,16 @@
 //operate function that takes an operator and 2 nukmbers and then calls one of the functions on the numbers 
 const operate = function (operator, x,y) {
   if (operator === "+"){
-    add(x,y);
+    return add(x,y);
   }
   else if (operator === "-") {
-    subtract(x,y);
+    return subtract(x,y);
   }
   else if (operator === "*") {
-    multiply(x,y);
+    return multiply(x,y);
   }
   else if (operator === "/") {
-    divide(x,y);
+    return divide(x,y);
   }
 }
 
@@ -54,7 +54,8 @@ plus.addEventListener('onclick', ()=>{
   if(currentOp === null){
     currentOp = "+"
   }
-total = operate(currentOp, Number(total), Number(currentVal));
+  else
+  total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "+";
 currentVal ="0";
@@ -65,7 +66,7 @@ minus.addEventListener('onclick', ()=>{
   if(currentOp === null){
     currentOp = "-"
   }
-total = operate(currentOp, Number(total), Number(currentVal));
+  total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "-";
 currentVal ="0";
@@ -76,7 +77,7 @@ times.addEventListener('onclick', ()=>{
   if(currentOp === null){
     currentOp = "*"
   }
-total = operate(currentOp, Number(total), Number(currentVal));
+  total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "*";
 currentVal ="0";
@@ -87,7 +88,7 @@ slash.addEventListener('onclick', ()=>{
   if(currentOp === null){
     currentOp = "/"
   }
-total = operate(currentOp, Number(total), Number(currentVal));
+  total = toString(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "/";
 currentVal ="0";
