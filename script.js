@@ -46,7 +46,15 @@ display.textContent = currentVal;
 
 const equals = document.querySelector("#equals");
 equals.addEventListener('click', ()=>{
-  total = Number(operate(currentOp, Number(total), Number(currentVal)));
+//   total = Number(operate(currentOp, Number(total), Number(currentVal)));
+// display.textContent = total;
+// currentOp = "empty";
+// currentVal ="0";
+if (currentOp === "empty") {
+  equals.disabled = true;
+}
+else equals.disabled = false;
+total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "empty";
 currentVal ="0";
@@ -245,9 +253,9 @@ clr.addEventListener('click', () => {
 const CE = document.querySelector("#CE");
 clr.addEventListener('click', () => {
   currentVal = "0";
-  total = "0";
+  total = 0;
   currentOp = "empty";
-  display.textContent = total;
+  display.textContent = currentVal;
   dot.disabled = false;
 });
 
