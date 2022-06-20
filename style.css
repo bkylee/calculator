@@ -1,3 +1,23 @@
 button {
     display: inline-block;
+    height: 50px;
+    width: 70px;
+}
+
+#clear, #CE {
+    width: 107px;
+    height: 50px;
+}
+
+#equals, #plus, #minus, #times, #slash {
+    width: 60px;
+}
+
+.calculatorBody {
+    text-align: center;
+}
+
+#display {
+    min-height: 100px;
+    font-size: 80px;
 }
