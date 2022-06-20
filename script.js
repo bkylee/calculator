@@ -45,20 +45,15 @@ display.textContent = currentVal;
 //event listeners for all opeartions 
 
 const equals = document.querySelector("#equals");
-equals.disabled = true;
 equals.addEventListener('click', ()=>{
-//   total = Number(operate(currentOp, Number(total), Number(currentVal)));
-// display.textContent = total;
-// currentOp = "empty";
-// currentVal ="0";
-if (currentOp === "empty") {
-  equals.disabled = true;
+if (total === "0") {
+  display.textContent = Number(currentVal);
 }
-else equals.disabled = false;
+else {
 total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "empty";
-currentVal ="0";
+currentVal ="0";}
 });
 
 const plus = document.querySelector("#plus");
@@ -82,6 +77,7 @@ minus.addEventListener('click', ()=>{
     currentOp = "-";
     total = Number(operate(currentOp, Number(total), Number(currentVal)));
   }
+  else
   total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "-";
@@ -95,6 +91,7 @@ times.addEventListener('click', ()=>{
     currentOp = "*";
     total = Number(operate(currentOp, Number(total), Number(currentVal)));
   }
+  else
   total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "*";
@@ -108,6 +105,7 @@ slash.addEventListener('click', ()=>{
     currentOp = "/";
     total = Number(operate(currentOp, Number(total), Number(currentVal)));
   }
+  else
   total = Number(operate(currentOp, Number(total), Number(currentVal)));
 display.textContent = total;
 currentOp = "/";
