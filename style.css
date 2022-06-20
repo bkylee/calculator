@@ -18,6 +18,12 @@ button {
 }
 
 #display {
+    display: flexbox;
     min-height: 100px;
     font-size: 80px;
+    border: 10px;
+    border-style: groove;
+    margin-left: 390px;
+    margin-right: 390px;
+}
 }
