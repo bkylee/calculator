@@ -109,6 +109,7 @@ currentVal ="0";
 
 const num1 = document.querySelector("#one");
 num1.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "1";
     display.textContent = currentVal;
@@ -116,10 +117,12 @@ num1.addEventListener('click', () => {
   else{
   currentVal = currentVal + "1";
   display.textContent = currentVal;}
+}
 }); 
 
 const num2 = document.querySelector("#two");
 num2.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "2";
     display.textContent = currentVal;
@@ -127,11 +130,13 @@ num2.addEventListener('click', () => {
   else{
   currentVal = currentVal + "2";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num3 = document.querySelector("#three");
 num3.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "3";
     display.textContent = currentVal;
@@ -139,11 +144,13 @@ num3.addEventListener('click', () => {
   else{
   currentVal = currentVal + "3";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num4 = document.querySelector("#four");
 num4.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "4";
     display.textContent = currentVal;
@@ -151,11 +158,13 @@ num4.addEventListener('click', () => {
   else{
   currentVal = currentVal + "4";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num5 = document.querySelector("#five");
 num5.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "5";
     display.textContent = currentVal;
@@ -163,11 +172,13 @@ num5.addEventListener('click', () => {
   else{
   currentVal = currentVal + "5";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num6 = document.querySelector("#six");
 num6.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "6";
     display.textContent = currentVal;
@@ -175,11 +186,13 @@ num6.addEventListener('click', () => {
   else{
   currentVal = currentVal + "6";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num7 = document.querySelector("#seven");
 num7.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "7";
     display.textContent = currentVal;
@@ -187,11 +200,13 @@ num7.addEventListener('click', () => {
   else{
   currentVal = currentVal + "7";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num8 = document.querySelector("#eight");
 num8.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "8";
     display.textContent = currentVal;
@@ -199,11 +214,13 @@ num8.addEventListener('click', () => {
   else{
   currentVal = currentVal + "8";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num9 = document.querySelector("#nine");
 num9.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "9";
     display.textContent = currentVal;
@@ -211,12 +228,13 @@ num9.addEventListener('click', () => {
   else{
   currentVal = currentVal + "9";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const num0 = document.querySelector("#zero");
 num0.addEventListener('click', () => {
-
+  if (currentVal.length < 8){
   //check this currentVal === "0"
   if (display.textContent === total || currentVal === "0") {
     currentVal = "0";
@@ -225,11 +243,13 @@ num0.addEventListener('click', () => {
   else{
   currentVal = currentVal + "0";
   display.textContent = currentVal;}
+  }
 }); 
 
 
 const dblZero = document.querySelector("#dblZero");
 dblZero.addEventListener('click', () => {
+  if (currentVal.length < 8){
   if (display.textContent === total || currentVal === "0") {
     currentVal = "00";
     display.textContent = currentVal;
@@ -237,6 +257,7 @@ dblZero.addEventListener('click', () => {
   else{
   currentVal = currentVal + "00";
   display.textContent = currentVal;}
+  }
 }); 
 
 
