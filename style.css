@@ -10,6 +10,7 @@ background-color: black;
 h1 {
     color: white;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
