@@ -32,8 +32,6 @@ const add = function(x,y) {
     return x/y;
   };
 
-  console.log(operate ("-", 24, 4));
-
 // set manipulative display variable. 
 let total = "0";
 let currentVal = "0";
