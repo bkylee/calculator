@@ -44,8 +44,8 @@ display.textContent = currentVal;
 
 const equals = document.querySelector("#equals");
 equals.addEventListener('click', ()=>{
-if (total === "0") {
-  display.textContent = Number(currentVal);
+if (currentOp === "empty"){
+currentOp = "+";
 }
 else {
 total = Number(operate(currentOp, Number(total), Number(currentVal)));
